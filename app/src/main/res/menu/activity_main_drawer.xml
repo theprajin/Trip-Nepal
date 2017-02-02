@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_heritage"
+            android:icon="@drawable/ic_home_black_48dp"
+            android:title="World Heritage Sites" />
+        <item
+            android:id="@+id/nav_destination"
+            android:icon="@drawable/ic_room_black_48dp"
+            android:title="Destination" />
+        <item
+            android:id="@+id/nav_nearme"
+            android:icon="@drawable/ic_gps_fixed_black_48dp"
+            android:title="Near me" />
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_search_black_48dp"
+            android:title="Search" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
