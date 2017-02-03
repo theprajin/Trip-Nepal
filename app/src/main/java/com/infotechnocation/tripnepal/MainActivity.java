@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.infotechnocation.tripnepal.adapters.HeritageRVAdapter;
 import com.infotechnocation.tripnepal.entity.Heritage;
+import com.infotechnocation.tripnepal.fragments.DestinationFragment;
 import com.infotechnocation.tripnepal.fragments.HeritageFragment;
 import com.infotechnocation.tripnepal.fragments.MapsFragment;
 
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity
             fm.beginTransaction().replace(R.id.content_from, new HeritageFragment()).commit();
 
         } else if (id == R.id.nav_destination) {
-
+            fm.beginTransaction().replace(R.id.content_from, new DestinationFragment()).commit();
 
         } else if (id == R.id.nav_nearme) {
 

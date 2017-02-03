@@ -3,30 +3,31 @@
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp">
+    android:layout_marginRight="5dp"
+    android:id="@+id/card_destination">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp">
 
         <ImageView
-            android:id="@+id/imagecard"
+            android:id="@+id/dest_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/lumbini"/>
+            android:src="@drawable/boudhanath"
+            android:adjustViewBounds="true"/>
 
         <TextView
-            android:id="@+id/titlecard"
+            android:id="@+id/dest_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
             android:text="Heritage"/>
 
         <TextView
-            android:id="@+id/desccard"
+            android:id="@+id/dest_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This is the description of the image used in this android applicarionkajdlkfjlkajsdflkjalksdjflkjsaldkfjlksajdflkjsalkdfjlksajdflkjalksdjflksadjlfkjslakdjflksajdlfkjsalkdfjlksajdflkjaslkdfjlksajflkklasjdflkjasdflkjsalkdfjlksajdflkjsadlkfjlksadjflksajdflkjsadlkfjll" />
