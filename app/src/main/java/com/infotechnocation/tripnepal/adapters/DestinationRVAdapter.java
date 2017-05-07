@@ -15,11 +15,12 @@ import java.util.ArrayList;
  * Created by Prajin Bajracharya on 2/3/2017.
  */
 
-public class DestinationRVAdapter extends RecyclerView.Adapter<DestinationViewHolder> implements View.OnClickListener{
+public class DestinationRVAdapter extends RecyclerView.Adapter<DestinationViewHolder>{
     public Context context;
     public ArrayList<Destination> destinationList;
     private OnRecyclerViewClickListener mOnRecyclerViewClickListener;
     public Destination destination;
+    int position;
 
     public DestinationRVAdapter(Context context, ArrayList<Destination> destinationList) {
         this.context = context;
@@ -35,12 +36,46 @@ public class DestinationRVAdapter extends RecyclerView.Adapter<DestinationViewHo
     }
 
     @Override
-    public void onBindViewHolder(DestinationViewHolder holder, int position) {
+    public void onBindViewHolder(DestinationViewHolder holder, final int position) {
         destination = destinationList.get(position);
+        this.position = position;
         holder.titleDest.setText(destination.getTitleDest());
-        holder.descDest.setText(destination.getDescDest());
+        //holder.descDest.setText(destination.getDescDest());
 
-        holder.itemView.setOnClickListener(this);
+        switch (destination.getTitleDest()){
+            case "Poon Hill":
+                holder.imageDest.setImageResource(R.drawable.poon_hill);
+                break;
+
+            case "Sarangkot":
+                holder.imageDest.setImageResource(R.drawable.sarangkot);
+                break;
+
+            case "Kopan Monastery":
+                holder.imageDest.setImageResource(R.drawable.kopan_monastery);
+                break;
+
+            case "Phewa Lake":
+                holder.imageDest.setImageResource(R.drawable.phewa_lake);
+                break;
+
+            case "World Peace Stupa":
+                holder.imageDest.setImageResource(R.drawable.world_peace_stupa);
+                break;
+
+            case "Budhanilkantha":
+                holder.imageDest.setImageResource(R.drawable.pashupatinath);
+                break;
+
+            default:
+        }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mOnRecyclerViewClickListener.onItemClick(destination,position);
+            }
+        });
 
     }
 
@@ -53,12 +88,8 @@ public class DestinationRVAdapter extends RecyclerView.Adapter<DestinationViewHo
         this.mOnRecyclerViewClickListener = mRecyclerItemClickListener;
     }
 
-    @Override
-    public void onClick(View v) {
-        mOnRecyclerViewClickListener.onItemClick(destination);
-    }
 
     public interface OnRecyclerViewClickListener{
-        void onItemClick(Destination mDestination);
+        void onItemClick(Destination mDestination, int position);
     }
 }

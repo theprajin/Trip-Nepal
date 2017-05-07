@@ -3,11 +3,26 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/fragment_display"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+   <ImageView
+       android:id="@+id/display_image"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:adjustViewBounds="true"
+       android:src="@drawable/boudhanath" />
 
-    </FrameLayout>
+    <TextView
+        android:id="@+id/display_title"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Boudhanath"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/display_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="jalsjfoiaksdnvlhaoilfklasjdfoijaiwoefsdmnfklakldfjlkajsdlkfjkaljfklsajdkfjklasjdfkljadfkjsaklsdjfklsajdklfjklasdjfkljasd"/>
 
 </LinearLayout>

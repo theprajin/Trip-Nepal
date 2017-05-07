@@ -1,12 +1,15 @@
 package com.infotechnocation.tripnepal.entity;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.Serializable;
 
 /**
  * Created by Prajin Bajracharya on 2/3/2017.
  */
 
-public class Destination implements Serializable {
+public class Destination{
 
     private String titleDest;
     private String descDest;
@@ -18,6 +21,7 @@ public class Destination implements Serializable {
         this.titleDest = titleDest;
         this.descDest = descDest;
     }
+
 
     public String getTitleDest() {
         return titleDest;
@@ -34,4 +38,6 @@ public class Destination implements Serializable {
     public void setDescDest(String descDest) {
         this.descDest = descDest;
     }
+
+
 }

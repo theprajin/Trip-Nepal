@@ -29,8 +29,7 @@
         <TextView
             android:id="@+id/dest_desc"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="This is the description of the image used in this android applicarionkajdlkfjlkajsdflkjalksdjflkjsaldkfjlksajdflkjsalkdfjlksajdflkjalksdjflksadjlfkjslakdjflksajdlfkjsalkdfjlksajdflkjaslkdfjlksajflkklasjdflkjasdflkjsalkdfjlksajdflkjsadlkfjlksadjflksajdflkjsadlkfjll" />
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 

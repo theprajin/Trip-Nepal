@@ -1,5 +1,6 @@
 package com.infotechnocation.tripnepal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,11 +30,17 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("World Heritage List");
+        //setActionBarTitle("World Heritage List");
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -54,6 +61,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        /**if (savedInstanceState == null) {
+            navigationView.getMenu().performIdentifierAction(R.id.content_from, 0);
+        }*/
 
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.content_from, new HeritageFragment()).commit();
@@ -109,21 +120,70 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_heritage) {
             fm.beginTransaction().replace(R.id.content_from, new HeritageFragment()).commit();
 
-        } else if (id == R.id.nav_destination) {
-            fm.beginTransaction().replace(R.id.content_from, new DestinationFragment()).commit();
+        } else if (id == R.id.nav_poonhill) {
+            int position = 0;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_nearme) {
+        } else if (id == R.id.nav_sarangkot) {
+            int position = 1;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_search) {
+        } else if (id == R.id.nav_kopan) {
+            int position = 2;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_phewa){
+            int position = 3;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_worldStupa){
+            int position = 4;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
+
+        } else if (id==R.id.nav_budhanikantha){
+            int position = 5;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
+
+        } else if (id==R.id.nav_gorkhadurbar){
+            int position = 6;
+            Intent intent = new Intent(MainActivity.this, DestinationActivity.class);
+            intent.putExtra("thisposition",position);
+            startActivity(intent);
 
         }
+
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void setActionBarTitle(String title) {
+        getSupportActionBar().setTitle(title);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //DestinationActivity mDestinationActivity= new DestinationActivity();
+
+       /** if (mDestinationActivity.YES==0){
+            FragmentManager fm = getSupportFragmentManager();
+            fm.beginTransaction().replace(R.id.content_from, new DestinationFragment()).commit();
+        }*/
+
     }
 }

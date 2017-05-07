@@ -20,16 +20,41 @@
             android:title="Search" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Popular Places">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_poonhill"
+                android:icon="@drawable/ic_room_black_48dp"
+                android:title="Poon Hill" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_sarangkot"
+                android:icon="@drawable/ic_room_black_48dp"
+                android:title="Sarangkot" />
+
+            <item
+                android:id="@+id/nav_kopan"
+                android:title="Kopan Monastery"
+                android:icon="@drawable/ic_room_black_48dp"/>
+
+            <item
+                android:id="@+id/nav_phewa"
+                android:title="Phewa Lake"
+                android:icon="@drawable/ic_room_black_48dp"/>
+
+            <item
+                android:id="@+id/nav_worldStupa"
+                android:title="World Peace Stupa"
+                android:icon="@drawable/ic_room_black_48dp"/>
+
+            <item
+                android:id="@+id/nav_budhanikantha"
+                android:title="Budhanilkantha"
+                android:icon="@drawable/ic_room_black_48dp"/>
+
+            <item
+                android:id="@+id/nav_gorkhadurbar"
+                android:title="Gorkha Durbar"
+                android:icon="@drawable/ic_room_black_48dp"/>
         </menu>
     </item>
 
